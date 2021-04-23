@@ -1,0 +1,14 @@
+<h1>Index</h1>
+
+<div>
+    <span>Hello, {{request.user}}</span>
+    <span><a href="{% url 'logoutUser' %}">Logout</a> </span>
+</div>
+
+{% if request.user.is_staff %}
+
+    <div>
+        <span>Here is your <a href="{% url 'dashboard' %}">Dashboard</a></span>
+    </div>
+
+{% endif %}
